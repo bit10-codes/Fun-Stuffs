@@ -12,16 +12,17 @@ The Recamán sequence is a well-known integer sequence defined by a simple rule 
 
 The sequence ( a(n) ) is defined as:
 
-* ( a(0) = 0 )
-* For ( n \ge 1 ):
+```
+a(0) = 0
 
-[
-a(n) =
-\begin{cases}
-a(n-1) - n, & \text{if } a(n-1) - n > 0 \text{ and has not appeared before} \
-a(n-1) + n, & \text{otherwise}
-\end{cases}
-]
+For n ≥ 1:
+
+If a(n−1) − n > 0 and has not appeared before:
+    a(n) = a(n−1) − n
+Else:
+    a(n) = a(n−1) + n
+```
+
 
 Each step attempts a **backward move** first.
 If that move is invalid (negative or already used), the sequence moves **forward** instead.
@@ -105,4 +106,4 @@ This will:
 
 ## 😉 Fun Fact
 
-Neil Sloane has conjectured that every number eventually appears, but this has not been proven. As of 2018, 10^230^ terms have been calculated, and 852,655 is the smallest natural number to not appear on the list.
+Neil Sloane has conjectured that every number eventually appears, but this has not been proven. As of 2018, 10^230 terms have been calculated, and 852,655 is the smallest natural number to not appear on the list.
